@@ -29,14 +29,14 @@ export function Visibility() {
     <section className="py-24 md:py-32 px-6 bg-[#0f1420] relative z-10 border-t border-white/5">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           <div>
             <FadeIn>
               <h2 className="text-[36px] md:text-[48px] font-bold leading-tight mb-6">
-                Full Visibility, Always
+                Full Visibility, At All Times
               </h2>
               <p className="text-[18px] text-white/70 leading-relaxed mb-10">
-                You shouldn't have to wonder if your AI is performing. That's why every GoPeakCall client gets access to a private, branded dashboard that updates in real time after every call.
+                You shouldn't have to wonder if your AI is performing. Every GoPeakCall client gets access to a professional management dashboard with call transcripts, recordings, performance insights, usage analytics, and billing.
               </p>
             </FadeIn>
 

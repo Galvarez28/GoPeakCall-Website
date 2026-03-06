@@ -2,6 +2,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ProofStrip } from './components/ProofStrip';
 import { ProblemStatement } from './components/ProblemStatement';
+import { Mission } from './components/Mission';
 import { HowItWorks } from './components/HowItWorks';
 import { Features } from './components/Features';
 import { Visibility } from './components/Visibility';
@@ -19,11 +20,12 @@ export default function App() {
       <main>
         <Hero />
         <ProofStrip />
+        <Stats />
         <ProblemStatement />
+        <Mission />
         <HowItWorks />
         <Features />
         <Visibility />
-        <Stats />
         <SocialProof />
         <Pricing />
         <FAQ />

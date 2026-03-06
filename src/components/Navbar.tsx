@@ -13,17 +13,15 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 h-16 flex items-center ${
-        scrolled ? 'bg-[#0a0e1a]/70 backdrop-blur-[20px] border-b border-white/10' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 h-16 flex items-center ${scrolled ? 'bg-[#0a0e1a]/70 backdrop-blur-[20px] border-b border-white/10' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 w-full flex items-center justify-between">
         <div className="flex items-center gap-2">
-          {/* Using the logo provided via a placeholder that the user can replace with their actual file */}
-          <img src="/logo.png" alt="GoPeakCall Logo" className="h-8 object-contain" />
-          <span className="font-bold text-xl tracking-tight ml-2">GoPeakCall</span>
+          <img src="/images/logo_transparent.png" alt="GoPeakCall Logo" className="h-14 object-contain" />
+          <span className="font-bold text-[28px] tracking-tight ml-2 text-[#73c2fb]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}>GoPeakCall</span>
         </div>
-        
+
         <nav className="hidden md:flex items-center gap-8">
           {['How It Works', 'Features', 'Pricing', 'FAQ'].map((item) => (
             <a

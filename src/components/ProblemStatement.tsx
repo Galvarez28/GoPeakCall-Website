@@ -22,12 +22,12 @@ export function ProblemStatement() {
             </p>
           </FadeInStaggerItem>
         </FadeInStagger>
-        
+
         <FadeInStaggerItem className="relative">
           <div className="absolute inset-0 bg-blue-500/20 blur-[60px] rounded-full"></div>
-          <img 
-            src="https://image.pollinations.ai/prompt/A%20stressed%20HVAC%20contractor%20in%20a%20uniform%2C%20holding%20a%20smartphone%20to%20his%20ear%2C%20looking%20frustrated%20and%20overwhelmed.%20Dark%20navy%20background%2C%20cinematic%20lighting%2C%20high%20quality%2C%20realistic%20photography?width=800&height=600&nologo=true" 
-            alt="Stressed contractor on phone" 
+          <img
+            src="/images/stressed_contractor.png"
+            alt="Stressed contractor on phone"
             className="relative z-10 rounded-2xl border border-white/10 shadow-2xl object-cover w-full h-[400px]"
             referrerPolicy="no-referrer"
           />

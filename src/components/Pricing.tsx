@@ -5,41 +5,43 @@ const tiers = [
   {
     name: "Basic",
     price: "$399",
-    desc: "Month-to-month. Cancel anytime.",
+    originalPrice: "$499",
+    desc: "Discounted for founding partners.",
     features: [
-      "24/7 availability",
-      "Direct scheduling (ServiceTitan, Housecall Pro, Jobber)",
-      "Emergency call transfers",
-      "Handles new & returning clients",
-      "Full CRM database updates",
-      "Client analytics dashboard"
+      "24/7 call answering",
+      "Direct calendar scheduling",
+      "CRM updates",
+      "New & returning client handling",
+      "Emergency transfer to human agent"
     ],
-    buttonText: "Get Started"
+    buttonText: "Claim Basic Plan"
   },
   {
     name: "Pro",
-    price: "$499",
-    desc: "Month-to-month. Cancel anytime.",
-    popular: true,
+    price: "$599",
+    originalPrice: "$699",
+    desc: "Discounted for founding partners.",
     features: [
       "Everything in Basic",
-      "SMS review request after appointment",
+      "SMS review requests after appointments",
       "Rescheduling handling",
-      "Cancellation handling",
-      "Priority support"
+      "Cancellation handling"
     ],
-    buttonText: "Get Started"
+    buttonText: "Claim Pro Plan"
   },
   {
-    name: "Pro",
-    price: "$399",
-    desc: "Lock in Pro features at the Basic price.",
-    commitment: "6-Month Commitment",
+    name: "6-Month Commitment",
+    price: "$499",
+    originalPrice: "Limited Offer",
+    desc: "Lock in Pro features at our lowest rate.",
+    popular: true,
     features: [
       "Everything in Pro",
-      "Discounted rate locked for 6 months"
+      "Reduced monthly price",
+      "Priority support",
+      "6-month prepay commitment"
     ],
-    buttonText: "Get Started — Save $600"
+    buttonText: "Claim 6-Month Plan"
   }
 ];
 
@@ -56,32 +58,35 @@ export function Pricing() {
 
         <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {tiers.map((tier, i) => (
-            <FadeInStaggerItem key={i} className={`relative rounded-2xl p-8 flex flex-col ${
-              tier.popular 
-                ? 'bg-blue-500/10 border border-blue-500/50 shadow-[0_0_40px_rgba(59,130,246,0.1)]' 
-                : 'bg-white/[0.03] border border-white/10'
-            }`}>
+            <FadeInStaggerItem key={i} className={`relative rounded-2xl p-8 flex flex-col ${tier.popular
+              ? 'bg-blue-500/10 border border-blue-500/50 shadow-[0_0_40px_rgba(59,130,246,0.1)]'
+              : 'bg-white/[0.03] border border-white/10'
+              }`}>
               {tier.popular && (
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-500 text-white text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full whitespace-nowrap">
                   Most Popular
                 </div>
               )}
-              
+
               <h3 className="text-[24px] font-semibold mb-2 flex items-center gap-2">
                 {tier.name}
-                {tier.commitment && (
-                  <span className="text-xs font-medium bg-white/10 text-white/80 px-2 py-1 rounded-md tracking-wide">
-                    {tier.commitment}
-                  </span>
-                )}
               </h3>
               <p className="text-[15px] text-white/60 mb-6 h-10">{tier.desc}</p>
-              
+
               <div className="mb-8">
-                <span className="text-[48px] font-bold tracking-tight">{tier.price}</span>
-                <span className="text-white/50">/month</span>
+                <div className="flex items-baseline gap-2 mb-1">
+                  {tier.originalPrice !== "Limited Offer" ? (
+                    <span className="text-[20px] font-medium text-white/40 line-through tracking-tight">{tier.originalPrice}</span>
+                  ) : (
+                    <span className="text-[14px] font-semibold text-blue-400 uppercase tracking-wider">{tier.originalPrice}</span>
+                  )}
+                </div>
+                <div>
+                  <span className="text-[48px] font-bold tracking-tight">{tier.price}</span>
+                  <span className="text-white/50">/month</span>
+                </div>
               </div>
-              
+
               <ul className="space-y-4 mb-8 flex-grow">
                 {tier.features.map((f, j) => (
                   <li key={j} className="flex items-start gap-3">
@@ -90,12 +95,11 @@ export function Pricing() {
                   </li>
                 ))}
               </ul>
-              
-              <a href="#contact" className={`w-full h-[52px] flex items-center justify-center rounded-lg font-semibold transition-all duration-180 ${
-                tier.popular 
-                  ? 'bg-blue-500 text-white hover:-translate-y-[2px] hover:shadow-[inset_0_0_20px_rgba(255,255,255,0.2)]' 
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}>
+
+              <a href="#contact" className={`w-full h-[52px] flex items-center justify-center rounded-lg font-semibold transition-all duration-180 ${tier.popular
+                ? 'bg-blue-500 text-white hover:-translate-y-[2px] hover:shadow-[inset_0_0_20px_rgba(255,255,255,0.2)]'
+                : 'bg-white/10 text-white hover:bg-white/20'
+                }`}>
                 {tier.buttonText}
               </a>
             </FadeInStaggerItem>
