@@ -8,7 +8,9 @@ const tiers = [
     originalPrice: "$549",
     label: "Discounted for Founding Partners",
     badge: null,
-    headline: null,
+    // CHANGE 5a
+    headline: "Never miss a call again",
+    subheadline: "Your safety net — captures every opportunity",
     commitmentNote: null,
     basicFeatures: [
       "24/7 call answering",
@@ -32,7 +34,9 @@ const tiers = [
     originalPrice: "$799",
     label: "Discounted for Founding Partners",
     badge: "Most Popular",
-    headline: null,
+    // CHANGE 5c
+    headline: "Turn more calls into completed jobs and repeat customers",
+    subheadline: "Your revenue engine — maximizes every opportunity",
     commitmentNote: null,
     basicFeatures: [
       "Everything in Basic",
@@ -55,7 +59,8 @@ const tiers = [
     name: "Founding Partner Lock-In",
     price: "$499",
     originalPrice: null,
-    label: "Limited Offer — Only available to our first 5 clients",
+    // CHANGE 2
+    label: "Limited Offer — Only available to our first 3 founding partners",
     badge: "Best Value",
     headline: "Lock in Pro features at our lowest rate.",
     commitmentNote: "6-month prepay commitment",
@@ -90,6 +95,10 @@ export function Pricing() {
           <h2 className="text-[36px] md:text-[48px] font-bold leading-tight mb-4">
             Simple plans for any size fleet.
           </h2>
+          {/* CHANGE 5e */}
+          <p className="text-[20px] text-white font-semibold mb-2">
+            Basic stops the leak. Pro fills the bucket.
+          </p>
           <p className="text-[18px] text-white/80 max-w-2xl mx-auto font-medium">
             If GoPeakCall recovers just 1–2 missed jobs per month, it pays for itself.
           </p>
@@ -98,7 +107,7 @@ export function Pricing() {
         <FadeInStagger className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {tiers.map((tier, i) => (
             <FadeInStaggerItem key={i} className={`relative rounded-2xl p-8 flex flex-col h-full ${tier.popular
-                ? 'bg-blue-500/10 border border-blue-500/50 shadow-[0_0_40px_rgba(59,130,246,0.15)]'
+                ? 'bg-blue-500/10 border-2 border-blue-500 shadow-[0_0_50px_rgba(59,130,246,0.3)]' /* CHANGE 6 */
                 : tier.bestValue
                   ? 'bg-amber-500/10 border border-amber-500/50 shadow-[0_0_40px_rgba(245,158,11,0.15)]'
                   : 'bg-white/[0.03] border border-white/10'
@@ -116,7 +125,11 @@ export function Pricing() {
               <p className="text-[14px] text-white/60 mb-2 min-h-[40px]">{tier.label}</p>
 
               {tier.headline && (
-                <p className="text-[16px] text-white font-medium mb-4">{tier.headline}</p>
+                <div className="mb-4">
+                  <p className="text-[16px] text-white font-medium">{tier.headline}</p>
+                  {/* @ts-ignore */}
+                  {tier.subheadline && <p className="text-[14px] text-white/80 mt-1">{tier.subheadline}</p>}
+                </div>
               )}
 
               <div className="mb-6">
@@ -156,6 +169,18 @@ export function Pricing() {
                 </ul>
               </div>
 
+              {/* CHANGE 5b & 5d */}
+              {tier.name === "Basic" && (
+                <p className="text-[13px] text-white/70 text-center mb-4 mt-2 font-medium">
+                  Most businesses start here to make sure no call goes unanswered.
+                </p>
+              )}
+              {tier.name === "Pro" && (
+                <p className="text-[13px] text-white/70 text-center mb-4 mt-2 font-medium">
+                  Upgrade when you're ready to reduce no-shows, follow up automatically, and grow your reviews.
+                </p>
+              )}
+
               <a href="#contact" className={`w-full h-[52px] flex items-center justify-center rounded-lg font-semibold transition-all duration-180 mt-auto ${tier.popular
                   ? 'bg-blue-500 text-white hover:-translate-y-[2px] hover:shadow-[inset_0_0_20px_rgba(255,255,255,0.2)]'
                   : tier.bestValue
@@ -174,6 +199,10 @@ export function Pricing() {
           </p>
           <p className="text-[15px] text-white/60">
             You won't be charged until the free trial runs out.
+          </p>
+          {/* CHANGE 5f */}
+          <p className="text-[15px] text-white/60">
+            No contracts. Cancel anytime. Setup takes less than a week.
           </p>
         </FadeIn>
       </div>

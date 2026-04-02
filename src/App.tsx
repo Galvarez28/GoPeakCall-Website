@@ -32,7 +32,8 @@ export default function App() {
       <div className={`fixed top-16 left-0 right-0 z-40 bg-blue-600 border-b border-blue-500 shadow-lg text-center py-2 px-4 flex items-center justify-center transition-all duration-500 ease-in-out ${showBanner ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-[15px] pointer-events-none'
         }`}>
         <p className="text-[13px] sm:text-[14px] font-medium text-white tracking-wide">
-          Start Your <span className="font-bold">14-Day Free Trial</span> — <span className="font-normal text-blue-50">150 Minutes Included. No Setup Fee. Cancel Anytime.</span>
+          {/* CHANGE 1 */}
+          Start Your <span className="font-bold">30-Day Free Trial</span> — <span className="font-normal text-blue-50">150 Minutes Included. No Setup Fee. Cancel Anytime.</span>
         </p>
       </div>
       <main>

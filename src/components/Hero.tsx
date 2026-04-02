@@ -14,7 +14,8 @@ export function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-            Now onboarding our first 3 founding partners — discounted pricing, priority support, and a dedicated build just for your business.
+            {/* CHANGE 2 */}
+            Only 1 founding partner spot remaining — discounted pricing, priority support, and a dedicated build just for your business.
           </div>
         </FadeInStaggerItem>
 
@@ -33,7 +34,8 @@ export function Hero() {
 
         <FadeInStaggerItem className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <a href="#contact" className="h-[56px] px-[32px] flex items-center justify-center rounded-lg bg-blue-500 text-white text-[16px] font-semibold hover:-translate-y-[2px] hover:shadow-[inset_0_0_20px_rgba(255,255,255,0.2)] transition-all duration-180 w-full sm:w-auto">
-            Book a Discovery Call
+            {/* CHANGE 3 */}
+            See How It Works →
           </a>
         </FadeInStaggerItem>
       </FadeInStagger>

@@ -66,8 +66,9 @@ export function Footer() {
         <div className="flex flex-col justify-center lg:pl-12">
           <div className="mb-12">
             <img src="/images/logo_transparent.png" alt="GoPeakCall Logo" className="h-16 object-contain mb-6" />
+            {/* CHANGE 7 */}
             <p className="text-[15px] text-white/60 max-w-md leading-relaxed">
-              The intelligent voice agent built to help HVAC and home service businesses capture every lead and book more jobs.
+              Your phone is losing you jobs. We fix that. GoPeakCall answers every call 24/7, books the appointment, and keeps your schedule full — so no job goes to a competitor.
             </p>
           </div>
 

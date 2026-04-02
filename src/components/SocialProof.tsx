@@ -5,9 +5,10 @@ export function SocialProof() {
     <section className="py-24 md:py-32 px-6 bg-[#0a0e1a] relative z-10 border-t border-white/5">
       <div className="max-w-4xl mx-auto text-center">
         <FadeIn>
-          <span className="eyebrow mx-auto mb-6">Currently onboarding our first 3 founding partners.</span>
+          {/* CHANGE 2 */}
+          <span className="eyebrow mx-auto mb-6">2 of 3 founding partner spots have been filled.</span>
           <h2 className="text-[32px] md:text-[42px] font-bold leading-tight mb-6">
-            We're taking on a limited number of businesses for our launch period.
+            We are taking on one final business for our launch period.
           </h2>
           <p className="text-[18px] text-white/70 leading-relaxed mb-10 max-w-2xl mx-auto">
             Each partner gets hands-on setup, direct access to our team, and priority support. Once the 3 spots are filled, new clients go on a waitlist.
